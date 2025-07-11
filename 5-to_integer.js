@@ -1,0 +1,12 @@
+const { argv } = require('node:process');
+
+const input = process.argv[2];
+
+let num = Number(input);
+
+if (!Number.isNaN(num)) {
+	console.log(`My number is: ${num}`)
+} 
+else {
+        console.log("Not a number")
+};
