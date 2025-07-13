@@ -4,18 +4,17 @@
 //use a function
 //console.log to print all output
 
-const num = Number(process.argv[2]);
+const num = process.argv[2];
+const parsed = Number(num);
 
-function Factorial(num) {
-      if(num === 0) {
-        return 1;
-      } else {
-         return num * Factorial(num-1);
-      }
+function Factorial(n) {
+  if (isNaN(n) || n === undefined) {
+    return 1;
+  }
+  if (n === 0) {
+    return 1;
+  }
+  return n * Factorial(n - 1);
 }
 
-if (!Number.isNaN(num)) {
-      console.log(Factorial(num))
-} else {
-      console.log("NaN");
-}
+console.log(Factorial(parsed));
